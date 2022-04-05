@@ -18,7 +18,7 @@ I understand this statement means that while you grow up, you create new neurons
 You really shouldn't! It turns out that the number of neuron cells does not determine your intelligence but, their connections do. Also, if you do the match, you are probably going to die before losing a significant amount of neurons (9% after 100 years using the numbers of the counter).
 
 ## How many neurons are we really born with?
-Science used to think we had 100 billion, but in the last 10 years they are now considering an average of [86 billion] (https://pubmed.ncbi.nlm.nih.gov/19226510/). 
+Science used to think we had 100 billion, but in the last 10 years they are now considering an average of [86 billion](https://pubmed.ncbi.nlm.nih.gov/19226510/). 
 Science does not seem to know much about brains, so even if your count is lower, no one knows what that means.
 I know that mathematically it does not make sense to start with a round number like 86B and then compute in real time your personal count with a precision of 1 unit, but as I said earlier the counter is supposed to be fun, not accurate.
 I also added an intelligence adjustment (which is 100% baloney) to compensate for those smart ones :)
