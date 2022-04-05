@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  font-family: Helvetica, sans-serif;
 }
 body {
   min-height: 100%;
@@ -9,10 +10,66 @@ body {
   align-items: center;
   background: #EEE;
 }
+
+h2 {
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+
+#reference {
+  font-size: 1vw;;
+}
+
+.neuralform {
+  display: block;
+  text-align: center;
+  font-size: 2vw;
+  margin-top: 2em;
+}
+
+.neuralform #datetimeinput {
+  align-self: center;
+  width: 20vw;
+  font-size: 1.5vw;
+}
+
+.neuralform #question {
+  margin-top: 0.6em;
+  margin-bottom: 0.3em;
+}
+.neuralform #question #radios {
+  margin-top: 0.5em;
+  font-size: 1.2vw;
+}
+
+.neuralform #submitbutton {
+  margin-top: 0.5em;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  background: rgb(55, 55, 55);
+  font-size: min(2vw, 30px);
+  font-weight: 600;
+  line-height: 28px;
+  padding: 0.2em 0.4em;
+  text-align:center;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+#submitbutton:hover {
+  color: #000;
+  background: rgb(255, 218, 87);
+}
+
 .flip-digit {
   text-align: center;
   perspective: 400px;
-  margin: 20px auto;
+  margin-top: 6em;
   display: flex;
 }
 .flip-digit *,
