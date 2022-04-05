@@ -4,21 +4,37 @@
   <body>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./styles.css">
-    <form id="datetimeform" onsubmit="event.preventDefault(); eventFormSubmitted()">
+    <form class="neuralform" id="datetimeform" onsubmit="event.preventDefault(); eventFormSubmitted()">
       <div>
         <label for="datebirth">Please enter your date and time of birth:</label>
-        <br><input style="width:180px;" id="datetimeinput" type="datetime-local" name="birthdate" min="1900-01-01T00:00" max="3000-01-01" onfocus="this.max=(new Date().toISOString().split('T')[0])+'T00:00'" value="1989-12-13T00:00" required> 
+        <br><input id="datetimeinput" type="datetime-local" name="birthdate" min="1900-01-01T00:00" max="3000-01-01" onfocus="this.max=(new Date().toISOString().split('T')[0])+'T00:00'" value="1989-12-13T00:00" required> 
         <!-- defaults to Taylor Swift's birthday XD-->
+        <div id="question">
+          <label for="intelligence">How smart are you?</label><br>
+          <div id="radios">
+            <input type="radio" name="intelligence" id="smart" onchange="eventRadioSmart(this)">Einstein
+            <input type="radio" name="intelligence" checked id="average" onchange="eventRadioSmart(this)">Average
+            <input type="radio" name="intelligence" id="dumb" onchange="eventRadioSmart(this)">Pretty dumb
+          </div>
+        </div>
         <span class="validity"></span>
       </div>
       <div>
-        <input type="submit" value="Start counter!">
+        <input id="submitbutton" type="submit" value="Start counter!">
       </div>
     </form>
     <br><br>
     <h2>Reference</h2>
-    Number of neurons on birth (86,000,000,000)<a href="https://pubmed.ncbi.nlm.nih.gov/19226510/">https://pubmed.ncbi.nlm.nih.gov/19226510/</a>
-    How many neurons do we have on birth (200,000)<a href=" http://cda.morris.umn.edu/~meeklesr/neurons.html">http://cda.morris.umn.edu/~meeklesr/neurons.html</a>
+    <ul id="reference">
+      <li>
+        Number of neurons on birth (86,000,000,000)<a href="https://pubmed.ncbi.nlm.nih.gov/19226510/">https://pubmed.ncbi.nlm.nih.gov/19226510/</a>
+      </li>
+      <li>
+        How many neurons do we have on birth (200,000)<a href=" http://cda.morris.umn.edu/~meeklesr/neurons.html">http://cda.morris.umn.edu/~meeklesr/neurons.html</a>
+      </li>
+      <li>
+        Are these numbers true?<a href="veracity.html">Alberto's comment on these numbers</a>
+      </li>
+    </ul>
   </body>
 </html>
-<!-- https://codepen.io/shshaw/pen/vKzoLL?editors=1111 -->

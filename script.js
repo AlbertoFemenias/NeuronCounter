@@ -50,6 +50,7 @@ class NeuronCounter {
   startCounting = 0; 
 
   constructor(birthNeurons, birthdayText, rateOfLossPerSecond){
+    this.averageBirthNeurons = birthNeurons;
     this.birthNeurons = birthNeurons;
     this.birthdayText = birthdayText;
     this.rateOfLossPerSecond = rateOfLossPerSecond;
@@ -67,8 +68,11 @@ class NeuronCounter {
     }
 
   }
+  modifyBirthNeurons(deltaNeurons) {
+    this.birthNeurons = this.averageBirthNeurons + deltaNeurons;
+  }
 
-  updateBirth(newBirthStr) {
+  updateBirthDate(newBirthStr) {
     this.birthdayText = newBirthStr;
     this.startCounting = 1;
   }
@@ -81,7 +85,7 @@ class NeuronCounter {
   
   updateCount() {
     this.updateCurrentNeurons();
-    console.log(this.currentNeurons);
+    //console.log(this.currentNeurons);
     const nNeuronsArray = Array.from(String(this.currentNeurons), Number);
     for (let i=0; i<this.trackers.length; i++){
       this.trackers[i].update(nNeuronsArray[i]);
@@ -101,8 +105,18 @@ var counter = new NeuronCounter(neuronsAtBirth, "1970-01-01T00:00", rateOfLossPe
 document.body.appendChild(counter.el);
 setInterval(update, 1000);
 
+// Form events
 function eventFormSubmitted() {
   var x = document.getElementById("datetimeform");
   var birthdayText = x.elements[0].value;
-  counter.updateBirth(birthdayText);
+  counter.updateBirthDate(birthdayText);
+}
+
+function eventRadioSmart(radio) {
+  if (radio.id == "smart")
+    counter.modifyBirthNeurons(+15000000000)
+  if (radio.id == "dumb")
+    counter.modifyBirthNeurons(-15000000000)
+  if (radio.id == "average")
+    counter.modifyBirthNeurons(0)
 }
